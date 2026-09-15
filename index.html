@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10: Social Media & Digital Communication</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f9fbfd;
+            --text-color: #333;
+            --table-border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid var(--table-border);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* --- Image Magnifier CSS --- */
+        .magnifier-section {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .img-magnifier-container {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        .img-magnifier-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            cursor: none; /* Hide default cursor when hovering */
+        }
+
+        .img-magnifier-glass {
+            position: absolute;
+            border: 3px solid #3498db;
+            border-radius: 50%;
+            cursor: none;
+            width: 200px;
+            height: 200px;
+            display: none; /* Hidden by default */
+            pointer-events: none; /* Prevent glass from blocking mouse events */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            background-color: #fff;
+            z-index: 100;
+        }
+        
+        .instruction-text {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>WEEK 10: SOCIAL MEDIA, DIGITAL COMMUNICATION & ONLINE COLLABORATION</h1>
+    </header>
+
+    <main>
+        <section id="learning-objectives">
+            <h2>Learning Objectives</h2>
+            <ul>
+                <li>Classify different types of social media and digital communication platforms.</li>
+                <li>Analyze the impact of social media on personal relationships, society, and culture.</li>
+                <li>Identify tools and best practices for effective online collaboration.</li>
+                <li>Evaluate the positive and negative effects of social media use.</li>
+            </ul>
+        </section>
+
+        <section id="categories">
+            <h2>10.1 Categories of Social Media and Digital Communication</h2>
+            <p>"Social media" is a broad term covering many different types of platforms, each designed for different purposes and modes of interaction. Understanding these categories helps clarify why people use different platforms for different needs.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description & Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">Social Networking</td>
+                        <td>Platforms designed to build and maintain personal or professional networks of connections. <br><strong>Examples:</strong> Facebook (personal connections, community groups), LinkedIn (professional networking, job searching).</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Microblogging</td>
+                        <td>Platforms for short, frequent public posts, often used for real-time updates, news, and public discourse. <br><strong>Examples:</strong> Twitter/X, Threads.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Media Sharing</td>
+                        <td>Platforms centered on sharing photos, videos, and other media content. <br><strong>Examples:</strong> Instagram (photos/short videos), YouTube (long-form video), TikTok (short-form video).</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Messaging / VoIP</td>
+                        <td>(Voice over Internet Protocol) Platforms for direct or group communication via text, voice, or video calls. <br><strong>Examples:</strong> Facebook Messenger, WhatsApp, Viber, Zoom, Google Meet.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Discussion Forums</td>
+                        <td>Platforms organized around topic-based community discussions, often allowing more in-depth, threaded conversations. <br><strong>Examples:</strong> Reddit, Quora.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Collaboration Platforms</td>
+                        <td>Tools designed for shared work, document co-creation, and team coordination. <br><strong>Examples:</strong> Google Workspace (Docs, Sheets, Slides), Microsoft Teams, Slack.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="impact">
+            <h2>10.2 Impact of Social Media on Society</h2>
+            
+            <h3>Positive Impacts</h3>
+            <ul>
+                <li><strong>Connectivity</strong> — enables people to stay connected with friends and family across geographic distances.</li>
+                <li><strong>Information Access</strong> — provides rapid access to news, educational content, and diverse perspectives.</li>
+                <li><strong>Community Building</strong> — allows like-minded individuals to find and support each other (support groups, hobby communities, advocacy groups).</li>
+                <li><strong>Economic Opportunities</strong> — enables small businesses and individual creators to reach audiences and generate income (social commerce, content creation).</li>
+                <li><strong>Civic Engagement</strong> — facilitates organizing for social causes, awareness campaigns, and civic participation.</li>
+            </ul>
+
+            <h3>Negative Impacts and Concerns</h3>
+            <ul>
+                <li><strong>Mental Health Effects</strong> — research has linked excessive social media use to increased anxiety, depression, and lowered self-esteem, particularly related to social comparison.</li>
+                <li><strong>Misinformation Spread</strong> — false information can spread rapidly, sometimes faster than fact-checking can keep up (discussed further in Week 19).</li>
+                <li><strong>Privacy Concerns</strong> — personal information shared on social media can be collected, sold, or misused (discussed further in Week 12).</li>
+                <li><strong>Cyberbullying and Online Harassment</strong> — anonymity and distance can embolden harmful behavior.</li>
+                <li><strong>Reduced Face-to-Face Interaction</strong> — excessive screen time may reduce in-person social skills and relationships, particularly among younger users.</li>
+                <li><strong>Filter Bubbles and Echo Chambers</strong> — algorithms that show users content similar to what they already engage with can reinforce existing beliefs and reduce exposure to diverse viewpoints.</li>
+            </ul>
+        </section>
+
+        <section id="collaboration">
+            <h2>10.3 Online Collaboration: Tools and Best Practices</h2>
+            <p>Beyond social interaction, digital communication tools have transformed how people work together — whether for school group projects, remote work, or community organizing.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tool Type</th>
+                        <th>Description & Examples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">Cloud Document Collaboration</td>
+                        <td>Tools like Google Docs allow multiple users to edit the same document simultaneously, see each other's changes in real time, and maintain a version history.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Project Management Tools</td>
+                        <td>Platforms like Trello, Asana, or Notion help teams organize tasks, set deadlines, and track progress on collaborative projects.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Video Conferencing</td>
+                        <td>Tools like Zoom, Google Meet, and Microsoft Teams enable face-to-face meetings regardless of physical location, supporting remote group work and virtual classes.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Shared Cloud Storage</td>
+                        <td>Services like Google Drive, OneDrive, and Dropbox allow teams to store and access shared files from any device.</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight">Communication Channels</td>
+                        <td>Platforms like Slack or Discord organize team communication into channels by topic, reducing email clutter and enabling quick, organized discussions.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Best Practices for Online Collaboration</h3>
+            <ul>
+                <li>Establish clear communication norms (response times, preferred channels) at the start of a group project.</li>
+                <li>Use shared documents and project management tools to maintain transparency about who is responsible for what.</li>
+                <li>Be mindful of "digital body language" — written messages can be misread without tone of voice or facial expressions; be clear and considerate.</li>
+                <li>Respect others' time — schedule meetings considerately and keep them focused and time-limited.</li>
+                <li>Maintain version control — avoid creating multiple conflicting copies of the same document.</li>
+            </ul>
+        </section>
+
+        <!-- Image Magnifier Section -->
+        <section class="magnifier-section">
+            <h2>Interactive Infographic Report</h2>
+            <p class="instruction-text">Hover over or touch the image below to magnify and read the details clearly.</p>
+            
+            <div class="img-magnifier-container">
+                <img id="infographic" src="image_326d84.jpg" alt="Social Media Infographic">
+                <div id="magnifier-glass" class="img-magnifier-glass"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Setup Magnifier Function
+        function setupMagnifier() {
+            const img = document.getElementById("infographic");
+            const glass = document.getElementById("magnifier-glass");
+            
+            // Set the zoom level (e.g., 2.5 means 2.5x magnification)
+            const zoom = 2.5;
+
+            // Wait for image to load to get dimensions correctly
+            if(img.complete) {
+                initMagnifier();
+            } else {
+                img.addEventListener('load', initMagnifier);
+            }
+
+            function initMagnifier() {
+                // When moving mouse/touch over image
+                function moveMagnifier(e) {
+                    e.preventDefault();
+                    glass.style.display = "block";
+                    
+                    const imgRect = img.getBoundingClientRect();
+                    const w = glass.offsetWidth / 2;
+                    const h = glass.offsetHeight / 2;
+
+                    // Ensure the glass has the image set as its background
+                    glass.style.backgroundImage = "url('" + img.src + "')";
+                    glass.style.backgroundRepeat = "no-repeat";
+                    // Size the background according to zoom level
+                    glass.style.backgroundSize = (imgRect.width * zoom) + "px " + (imgRect.height * zoom) + "px";
+
+                    let x, y;
+                    
+                    // Handle touch vs mouse coordinates
+                    if (e.type.includes('touch')) {
+                        x = e.touches[0].clientX - imgRect.left;
+                        y = e.touches[0].clientY - imgRect.top;
+                    } else {
+                        x = e.clientX - imgRect.left;
+                        y = e.clientY - imgRect.top;
+                    }
+
+                    // Prevent glass from going outside the image boundaries visually
+                    if (x > imgRect.width) x = imgRect.width;
+                    if (x < 0) x = 0;
+                    if (y > imgRect.height) y = imgRect.height;
+                    if (y < 0) y = 0;
+
+                    // Move the glass
+                    glass.style.left = (x - w) + "px";
+                    glass.style.top = (y - h) + "px";
+                    
+                    // Move the background position inside the glass
+                    glass.style.backgroundPosition = "-" + ((x * zoom) - w) + "px -" + ((y * zoom) - h) + "px";
+                }
+
+                // Add event listeners for mouse and touch
+                img.addEventListener("mousemove", moveMagnifier);
+                glass.addEventListener("mousemove", moveMagnifier);
+                img.addEventListener("touchmove", moveMagnifier, {passive: false});
+                glass.addEventListener("touchmove", moveMagnifier, {passive: false});
+
+                // Hide the glass when the mouse leaves the image
+                img.addEventListener("mouseleave", () => { glass.style.display = "none"; });
+                img.addEventListener("touchend", () => { glass.style.display = "none"; });
+            }
+        }
+
+        // Initialize script after DOM loads
+        window.addEventListener("DOMContentLoaded", setupMagnifier);
+    </script>
+</body>
+</html>
